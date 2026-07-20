@@ -1,17 +1,17 @@
 @keyframes heart {
-    from {
-        scale: 1;
-    }
-    to {
-        scale: 1.25;
-    }    
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.25;
+  }
 }
 
 @keyframes sparks {
-    from {
-        fill: transparent;
-    }
-    to {
-        fill: var(--like-icon-bg-color);
-    }
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--like-icon-bg-color);
+  }
 }
