@@ -39,21 +39,13 @@
   display: block;
   margin-block-end: 20px;
   justify-self: center;
-  font-size: clamp(
-    3.0625rem,
-    2.7768rem + 1.4286vw,
-    4.0625rem
-  );
+  font-size: clamp(3.0625rem, 2.7768rem + 1.4286vw, 4.0625rem);
 }
 
 .header__logo-label {
   display: block;
   justify-self: center;
-  font-size: clamp(
-    0.875rem,
-    0.7143rem + 0.8036vw,
-    1.4375rem
-  );
+  font-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
   text-transform: uppercase;
 }
 
@@ -64,11 +56,9 @@
 
 .cards__list {
   inline-size: 100%;
-
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 50px;
-  background-color: var(--cover-color);
 }
 
 .cards__list-item {
@@ -79,6 +69,7 @@
 .card {
   border: 2px solid #000;
   padding-block-end: 25px;
+  background-color: var(--cover-color);
 }
 
 .card__title {
@@ -171,11 +162,6 @@ button {
 }
 
 .card__icon-button {
-  --contour-fill-color: var(--icon-like-fg-color);
-  --main-body-fill-color: transparent;
-  --core-fill-color: transparent;
-  --sparks-fill-color: transparent;
-
   position: relative;
   margin: 0;
   padding: 0;
@@ -272,7 +258,6 @@ dialog:open {
 
 .dialog__save,
 .dialog__save-title {
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,7 +267,6 @@ dialog:open {
   margin: auto;
   padding: 28px;
   inline-size: 353px;
-  block-size: 191px;
   flex-direction: column;
   gap: 28px;
   justify-content: space-between;
@@ -303,7 +287,7 @@ dialog:open {
 .dialog__save-button {
   margin: 0;
   inline-size: 100%;
-  block-size: 100%;
+  block-size: 38px;
 }
 
 /* эффекты для изображений */
@@ -362,40 +346,6 @@ dialog:open {
   animation: var(--heart-animation);
 }
 
-.card__icon-button:hover {
-  --main-body-fill-color: var(--like-icon-fg-color);
-  --contour-fill-color: var(--like-icon-fg-color);
-  --core-fill-color: var(--like-icon-fg-color);
-  --sparks-fill-color: transparent;
-
-  --core-transition: fill 0.3s linear 0s;
-  --main-body-transition: fill 0.3s linear 0.05s;
-}
-
-.card__icon-button:active {
-  --main-body-fill-color: var(--like-icon-bg-color);
-  --contour-fill-color: var(--like-icon-fg-color);
-  --core-fill-color: var(--like-icon-bg-color);
-  --sparks-fill-color: transparent;
-
-  --core-transition: fill 0.3s linear 0s;
-  --main-body-transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked {
-  --main-body-fill-color: var(--like-icon-bg-color);
-  --contour-fill-color: var(--like-icon-bg-color);
-  --core-fill-color: var(--like-icon-bg-color);
-  --sparks-fill-color: transparent;
-
-  --heart-animation: heart 0.3s ease-in 0.1s;
-  --sparks-animation: sparks 0.3s ease-in 0.1s;
-
-  --contour-transition: fill 0.3s linear 0.06s;
-  --main-body-transition: fill 0.3s linear 0.05s;
-  --core-transition: fill 0.3s linear 0s;
-}
-
 /* медиа-заросы */
 
 @media (width <= 375px) {
@@ -419,5 +369,9 @@ dialog:open {
     inline-size: 306px;
     block-size: 84px;
     flex-direction: column;
+  }
+
+  .dialog__save {
+    min-inline-size: 341px;
   }
 }

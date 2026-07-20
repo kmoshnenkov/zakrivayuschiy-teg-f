@@ -35,5 +35,47 @@
     --image-effect-mixed: 
         hue-rotate(var(--image-effect-hue))
         saturate(var(--image-effect-saturation));
+}
 
+/* анимация иконки сердца */
+
+.card__icon-button {
+  --contour-fill-color: var(--icon-like-fg-color);
+  --main-body-fill-color: transparent;
+  --core-fill-color: transparent;
+  --sparks-fill-color: transparent;
+}
+
+.card__icon-button:hover {
+  --main-body-fill-color: var(--like-icon-fg-color);
+  --contour-fill-color: var(--like-icon-fg-color);
+  --core-fill-color: var(--like-icon-fg-color);
+  --sparks-fill-color: transparent;
+
+  --core-transition: fill 0.3s linear 0s;
+  --main-body-transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active {
+  --main-body-fill-color: var(--like-icon-bg-color);
+  --contour-fill-color: var(--like-icon-fg-color);
+  --core-fill-color: var(--like-icon-bg-color);
+  --sparks-fill-color: transparent;
+
+  --core-transition: fill 0.3s linear 0s;
+  --main-body-transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked {
+  --main-body-fill-color: var(--like-icon-bg-color);
+  --contour-fill-color: var(--like-icon-bg-color);
+  --core-fill-color: var(--like-icon-bg-color);
+  --sparks-fill-color: transparent;
+
+  --heart-animation: heart 0.3s ease-in 0.1s;
+  --sparks-animation: sparks 0.3s ease-in 0.1s;
+
+  --contour-transition: fill 0.3s linear 0.06s;
+  --main-body-transition: fill 0.3s linear 0.05s;
+  --core-transition: fill 0.3s linear 0s;
 }
