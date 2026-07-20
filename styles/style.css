@@ -231,7 +231,7 @@ button {
   background-color: #000;
   content: "";
   transform: translateX(-100%);
-  transition: all 0.5s ease-in-out;
+  transition: fill 0.5s ease-in-out;
 }
 
 .button__hover-animation:hover.button__hover-animation::before {
@@ -243,7 +243,7 @@ button {
 dialog {
   position: fixed;
   inset: 0;
-  transition: all 0.3s linear;
+  transition: opacity 0.3s linear;
   opacity: 0;
 }
 
